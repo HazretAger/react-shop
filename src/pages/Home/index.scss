@@ -1,0 +1,11 @@
+.home {
+    &__container {
+        padding: 150px 0;
+    }
+    
+    &__card-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
