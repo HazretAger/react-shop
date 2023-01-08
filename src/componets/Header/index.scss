@@ -119,6 +119,40 @@
         }
     }
 
+    &__logo-text {
+        position: relative;
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+      
+    &__logo-text:before{
+        content:" ";
+        height: 2px;
+        width: 130px;
+        background: red;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+      
+    &__logo-text:after{
+        content:" ";
+        height: 2px;
+        width: 130px;
+        background: red;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+      
+    &__logo p {
+        text-transform: uppercase;
+        color: red;
+    }
+
     &__icons {
         display: flex;
         justify-content: end;

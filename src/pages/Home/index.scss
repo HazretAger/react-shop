@@ -8,4 +8,8 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
     }
+
+    &__swiper-container {
+        padding: 70px 0;
+    }
 }
