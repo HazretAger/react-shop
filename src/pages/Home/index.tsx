@@ -6,6 +6,7 @@ import { IProduct } from '../../models/Product';
 
 import { searchSlice } from '../../store/reducers/SearchSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+
 import '../../index.css';
 import './index.scss';
 
