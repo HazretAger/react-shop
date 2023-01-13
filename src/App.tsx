@@ -8,6 +8,7 @@ import Header from './componets/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Registration />}/>
+        <Route path="/cart" element={<Cart />}/>
       </Routes>
       {/* <Footer /> */}
     </div>

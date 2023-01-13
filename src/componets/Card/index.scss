@@ -1,83 +1,31 @@
 * {
     box-sizing: border-box;
- }
+}
 
 .card {
-    height: auto;
-
-    text-align: center;
-    font-size: 14px;
-    font-family: Lora;
-    text-transform: uppercase;
+    display: flex;
+    width: 100%;
+    padding: 10px;
 
     border-radius: 20px;
     box-shadow: 1px 1px 10px 0.5px rgba(0,0,0,.2);
 
-    &__img-box {
-        display: block;
-        position: relative;
-        flex-shrink: 0;
-        overflow: hidden;
-        width: auto;
-        height: auto;
-        padding-bottom: 100%;
-    }
-
     &__img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-width: 100%;
-        max-height: 100%;
-        margin: auto;
-        object-fit: cover;
-        object-position: center;
+        width: 250px;
+        height: 250px;
+        object-fit: scale-down;
     }
 
     &__content {
-        padding: 20px;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 35px;
 
-    &__title {
-        color: #5e5e5e;
-    }
-
-    &__title a {
-        text-decoration: none;
-        color: #2e2e2e;
-        font-weight: 600;
-        margin: 15px 0 5px;
-        padding-bottom: 7px;
-        display: block;
-        position: relative;
-        transition: .3s ease-in-out;
-    }
-
-    &__title a:after {
-        content: "";
-        position: absolute;
-        width: 40px;
-        height: 2px;
-        background: #2e2e2e;
-        left: 50%;
-        margin-left: -20px;
-        bottom: 0;
-        transition: .3s ease-in-out;
-    }
-    
-    &__title a:hover {
-        color: #c0a97a;
-    }
-
-    &__title:hover a:after {
-        background: #c0a97a;
-    }
-
-    &__price {
-        font-size: 20px;
-        color: #c0a97a;
-        font-weight: 700;
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

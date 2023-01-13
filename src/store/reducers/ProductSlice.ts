@@ -1,16 +1,16 @@
-import { IProduct } from "../../models/Product";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { IProduct } from "../../types/Product";
 
-interface SearchState {
+interface ProductState {
     products: IProduct[];
 }
 
-const initialState: SearchState = {
+const initialState: ProductState = {
     products: [],
 }
 
-export const searchSlice = createSlice({
-    name: 'search',
+export const productSlice = createSlice({
+    name: 'products',
     initialState,
     reducers: {
         setProducts(state, action: PayloadAction<Array<IProduct>>) {
@@ -19,4 +19,4 @@ export const searchSlice = createSlice({
     },
 });
 
-export default searchSlice.reducer;
+export default productSlice.reducer;
