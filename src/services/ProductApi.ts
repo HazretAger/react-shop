@@ -7,8 +7,17 @@ export const productsApi = createApi({
     endpoints: (builder) => ({
         getAllProducts: builder.query<IProduct[], string>({
             query: () => `products`,
+        }),
+        getProductsByCategory: builder.query<IProduct[], string>({
+            query: (caterogy: string): any => {
+                if (caterogy === "allCategories") {
+                    return `products`;
+                } else {
+                    return `products/category/${caterogy}`;
+                }
+            },
         })
     })
 });
 
-export const { useGetAllProductsQuery } = productsApi;
+export const { useGetAllProductsQuery, useGetProductsByCategoryQuery } = productsApi;

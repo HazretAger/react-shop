@@ -1,4 +1,5 @@
 import React from 'react';
+import SideBar from '../Sidebar/SideBar';
 import "./index.scss";
 import "../../index.css";
 
@@ -8,17 +9,7 @@ function Header() {
             <div className="container">
                 <div className="header__grid-container">
                     <div className="header__menu">
-                        <input id="menu__toggle" type="checkbox" />
-                        <label className="menu__btn" htmlFor="menu__toggle">
-                            <span></span>
-                        </label>
-                        <ul className="menu__box">
-                            <li><a className="menu__item" href="/">Главная</a></li>
-                            <li><a className="menu__item" href="#">Электроника</a></li>
-                            <li><a className="menu__item" href="#">Мужская одежда</a></li>
-                            <li><a className="menu__item" href="#">Женская одежда</a></li>
-                            <li><a className="menu__item" href="#">Украшения</a></li>
-                        </ul>
+                        <SideBar />
                     </div>
                     <div className="header__logo">
                         <h2 className="header__logo-text"> <a href="/"> SHOP </a> </h2>

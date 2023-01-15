@@ -1,5 +1,6 @@
 import React from 'react';
-import { useGetAllProductsQuery } from '../../services/ProductApi'
+import { useGetProductsByCategoryQuery } from '../../services/ProductApi';
+import { useAppSelector } from '../../hooks/redux';
 
 import Slider from "../../componets/Slider";
 import { Skeleton } from '../../componets/Skeleton';
@@ -10,8 +11,10 @@ import '../../index.css';
 import './index.scss';
 
 function Home() {
-    const { data = [], isLoading } = useGetAllProductsQuery('products');
+    const { category } = useAppSelector(state => state.productSlice);
+    const { data = [], isLoading } = useGetProductsByCategoryQuery(category);
     
+
     return (
         <section className="home">
             <div className="container home__container">
