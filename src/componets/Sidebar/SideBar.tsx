@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { productSlice } from '../../store/reducers/ProductSlice';
 import { useAppDispatch } from '../../hooks/redux';
 
@@ -13,7 +14,7 @@ function SideBar() {
     const getByCategory = (event: any): any => {
         switch (event.target.innerText) {
             case 'Главная': {
-                dispatch(setCategory("allCategories"));
+                dispatch(setCategory("allProducts"));
                 break;
             }
             case 'Электроника': {
@@ -47,7 +48,7 @@ function SideBar() {
                     categories.map((item: string, index: number): any => {
                         return (
                             <li onClick={getByCategory} key={index}>
-                                <a className="sidebar__item" href="#">{item}</a>
+                                <Link className="sidebar__item" to="/">{item}</Link>
                             </li>
                         );
                     })

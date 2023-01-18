@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './Cart.scss';
 
 function Cart() {
     return (
@@ -11,4 +11,4 @@ function Cart() {
     )
 };
 
-export default Cart
+export default Cart;

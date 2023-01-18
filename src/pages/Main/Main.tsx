@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGetProductsByCategoryQuery } from '../../services/ProductApi';
 import { useAppSelector } from '../../hooks/redux';
 
-import Slider from "../../componets/Slider";
-import { Skeleton } from '../../componets/Skeleton';
-import Card from '../../componets/Card';
+import Slider from "../../componets/Slider/Slider";
+import Card from '../../componets/Card/Card';
+import { Skeleton } from '../../componets/Skeleton/Skeleton';
 import { IProduct } from '../../types/Product';
 
 import '../../index.css';
-import './index.scss';
+import './Main.scss';
 
-function Home() {
+function Main() {
     const { category } = useAppSelector(state => state.productSlice);
     const { data = [], isLoading } = useGetProductsByCategoryQuery(category);
-    
+
+    console.log(category);
 
     return (
         <section className="home">
@@ -32,4 +33,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Main;

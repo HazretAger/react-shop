@@ -9,8 +9,8 @@ export const productsApi = createApi({
             query: () => `products`,
         }),
         getProductsByCategory: builder.query<IProduct[], string>({
-            query: (caterogy: string): any => {
-                if (caterogy === "allCategories") {
+            query: (caterogy: string = 'allProducts'): any => {
+                if (caterogy === "allProducts") {
                     return `products`;
                 } else {
                     return `products/category/${caterogy}`;
